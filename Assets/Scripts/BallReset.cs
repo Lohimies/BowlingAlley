@@ -4,7 +4,7 @@ public class BallReset : MonoBehaviour
 {
     public Rigidbody rb;
     public Transform respawnPoint;
-    public float minSpeedToRespawn = 0.1f;
+    public float minSpeedToRespawn = 0.3f;
 
     private bool canReset;
 
@@ -15,6 +15,7 @@ public class BallReset : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("can reset");
         canReset = true;
     }
 
@@ -22,6 +23,7 @@ public class BallReset : MonoBehaviour
     {
         if (canReset && rb.linearVelocity.magnitude < minSpeedToRespawn)
         {
+            Debug.Log("ball respawn");
             Respawn();
         }
     }

@@ -43,7 +43,7 @@ public class PinReset: MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         checkPins();
     }
