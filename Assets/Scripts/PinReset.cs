@@ -18,6 +18,7 @@ public class PinReset: MonoBehaviour
         {
            startPositions[i] = pins[i].transform.position;
            startRotations[i] = pins[i].transform.rotation;
+           Debug.Log(startPositions[i]);
         }
     }
 
@@ -26,7 +27,7 @@ public class PinReset: MonoBehaviour
         int fallencount = 0;
         foreach (var pin in pins)
         {
-            if (!pin.isFallen())
+            if (pin.isFallen())
                 fallencount++;
         }
         if (scoreText)
