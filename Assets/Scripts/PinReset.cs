@@ -1,8 +1,11 @@
 using System;
 using UnityEngine;
+using TMPro;
+
 public class PinReset: MonoBehaviour
 {
     public Pin[] pins;
+    public TextMeshProUGUI scoreText;
     private Vector3[] startPositions;
     private Quaternion[]  startRotations;
 
@@ -18,19 +21,17 @@ public class PinReset: MonoBehaviour
         }
     }
 
-    private void checkPins()
+    public void resetPins()
     {
+        int fallencount = 0;
         foreach (var pin in pins)
         {
             if (!pin.isFallen())
-                return;
+                fallencount++;
         }
-
-        resetPins();
-    }
-
-    private void resetPins()
-    {
+        if (scoreText)
+            scoreText.text = "Score: " + fallencount;
+        
         for (int i = 0; i < pins.Length; i++)
         {
             Rigidbody rb = pins[i].GetComponent<Rigidbody>();
@@ -41,10 +42,5 @@ public class PinReset: MonoBehaviour
             rb.position = startPositions[i];
             rb.rotation = startRotations[i];
         }
-    }
-
-    private void FixedUpdate()
-    {
-        checkPins();
     }
 }
