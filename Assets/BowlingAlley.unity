@@ -495,7 +495,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   respawnPoint: {fileID: 960300161}
-  pinResetter: {fileID: 0}
+  pinResetter: {fileID: 1253427810}
   moveThreshold: 0.1
   volumeScale: 0.5
 --- !u!82 &577564748
@@ -1826,6 +1826,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 683275615}
   m_SourcePrefab: {fileID: 100100000, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+--- !u!114 &1253427810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8680156348127162375, guid: 848af2e26516c439b832de038fe9bbd9, type: 3}
+  m_PrefabInstance: {fileID: 1609614064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39690147e9d1472b8f658aca0c0a4082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PinReset
 --- !u!1 &1276148450
 GameObject:
   m_ObjectHideFlags: 1

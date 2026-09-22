@@ -14,7 +14,7 @@ public class BallRoll : MonoBehaviour
     
     
     [Header("Sound Settings")]
-    [SerializeField] private float moveThreshold = 0.1f;
+    [SerializeField] private float moveThreshold = 0.3f;
     [SerializeField] private float volumeScale = 0.5f;
     
     private AudioSource audioSource;
@@ -33,8 +33,7 @@ public class BallRoll : MonoBehaviour
         rb.position = respawnPoint.position;
         rb.rotation = respawnPoint.rotation;
 
-        if (pinResetter)
-            pinResetter.resetPins();
+        pinResetter.resetPins();
     }
     
     private void Awake()
